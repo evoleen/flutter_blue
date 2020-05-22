@@ -66,7 +66,7 @@ typedef NS_ENUM(NSUInteger, LogLevel) {
 - (CBCentralManager*)centralManager{
   if (!_centralManager){
     _centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil
-            options:_uniqueId ? @{CBCentralManagerOptionRestoreIdentifierKey: _uniqueId} : @{}];
+            options:@{CBCentralManagerOptionRestoreIdentifierKey: @"com.evoleen.carity-pro"}];
   }
   return _centralManager;
 }
